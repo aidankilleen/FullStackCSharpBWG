@@ -1,16 +1,11 @@
-﻿@page
-@model HelloWorldWebApp.Pages.MembersModel
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
 @{
-
-    MemberManager mgr = new MemberManager();
-
-    var members = mgr.GetAll();
 }
 
 <div>
-    <h2>Members</h2>
-
-    <a class="btn btn-success" asp-area="" asp-page="/AddMember">Add Member</a>
+    <h2>Members Page</h2>
 
     <table class="table">
         <thead>
@@ -22,18 +17,16 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var member in members)
+            @foreach (var member in ViewBag.Members)
             {
-                <tr class="@( member.Active ? "active" : "inactive")">
+                <tr class="@(member.Active ? "active" : "inactive")">
                     <td>@member.Id</td>
                     <td>@member.Name</td>
                     <td>@member.Email</td>
-                    <td>@(member.Active ? "Active": "Inactive")</td>
+                    <td>@(member.Active ? "Active" : "Inactive")</td>
                 </tr>
             }
         </tbody>
     </table>
-
-
 
 </div>

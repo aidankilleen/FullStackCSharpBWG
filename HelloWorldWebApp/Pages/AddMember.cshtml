@@ -1,0 +1,18 @@
+﻿@page
+@model HelloWorldWebApp.Pages.AddMemberModel
+@{
+    
+}
+
+<div>
+    <h2>Add Member</h2>
+
+    <form method="post">
+        <input name="name" placeholder="Enter Name"/><br />
+        <input name="email" placeholder="your.name@domain.com" /><br />
+
+
+        <input class="btn btn-primary" type="submit" value="Save"/>
+        <a class="btn btn-secondary" asp-area="" asp-page="/Members">Cancel</a>
+    </form>
+</div>
