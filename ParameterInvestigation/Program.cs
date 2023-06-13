@@ -21,19 +21,13 @@ Console.WriteLine(msg?.Title);
 
 
 
-
+/*
 mm.AddMessage(new Message { Title = "New Message", Text = "A New Message" });
 
 Console.WriteLine("New List:");
 
 
-mm.DisplayAll();
-
-
-Member member = new Member { Id = 1, Name = "Alice", Email = "alice@gmail.com", Active = true };
-
-
-Console.WriteLine(member);
+*/
 
 
 MemberManager mgr = new MemberManager();
@@ -44,25 +38,38 @@ mgr.AddMember(new Member { Id = 3, Name = "Carol", Email = "carol@gmail.com", Ac
 mgr.AddMember(new Member { Id = 4, Name = "Dan", Email = "dan@gmail.com", Active = true });
 
 
-mgr.DisplayAll();
+
+mgr.GetAll()
+    .FindAll(member => !member.Active)
+    .ForEach(member => Console.Write(member));
 
 
-Member? mbr = mgr.FindById(4);
 
-Console.WriteLine($"{(mbr == null ? "Not Found" : mbr.Name)}");
+mgr.Delete(3);
+
+mgr.GetAll()
+    .ForEach(member => Console.Write(member));
 
 
-Console.WriteLine("Active Members:");
-List<Member> activeMembers = mgr.GetActiveMembers();
+Member? mem = mgr.FindById(1);
 
-foreach  (Member am in activeMembers) 
+if (mem != null)
 {
-    Console.WriteLine(am);
+    mem.Name = "CHANGED";
+    mgr.Update(mem);
+
 }
 
 
+mgr.GetAll()
+    .ForEach(member => Console.WriteLine(member));
 
-string s1 = "a string";
+
+
+
+
+
+// string s1 = "a string";
 
 //char c1 = 'a';
 

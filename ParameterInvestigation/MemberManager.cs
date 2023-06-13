@@ -36,8 +36,29 @@ namespace ParameterInvestigation
             return members.FindAll(member => member.Active);
         }
 
+        public List<Member> GetAll()
+        {
+            return members;
+        }
 
+        public void Delete(int id)
+        {
+            int index = members.FindIndex(member => member.Id == id);
+            if (index !=-1)
+            {
+                members.RemoveAt(index);
+            }
+        }
 
+        public void Update(Member memberToUpdate)
+        {
+            int index = members.FindIndex(member => member.Id == memberToUpdate.Id);
+            if (index !=-1)
+            {
+                members.RemoveAt(index);
+                members.Insert(index, memberToUpdate);
+            }
+        }
 
 
         /*
