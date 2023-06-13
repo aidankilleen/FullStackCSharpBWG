@@ -1,0 +1,37 @@
+﻿@page
+@model HelloWorldWebApp.Pages.MembersModel
+@{
+
+    MemberManager mgr = new MemberManager();
+
+    var members = mgr.GetAll();
+}
+
+<div>
+    <h2>Members</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var member in members)
+            {
+                <tr class="@( member.Active ? "active" : "inactive")">
+                    <td>@member.Id</td>
+                    <td>@member.Name</td>
+                    <td>@member.Email</td>
+                    <td>@(member.Active ? "Active": "Inactive")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+</div>

@@ -1,0 +1,32 @@
+﻿@page
+@model HelloWorldWebApp.Pages.AboutModel
+@{
+
+    Member member = new Member { Id = 1, Name = "Alice", Email = "alice@gmail.com", Active = true };
+}
+<div>
+
+    <h2>About Us</h2>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td>@(member.Id)</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>@(member.Name)</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>@(member.Email)</td>
+            </tr>
+            <tr class="@(member.Active ? "active" : "inactive")">
+                <td>Active</td>
+                <td>@(member.Active ? "Yes" : "No")</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

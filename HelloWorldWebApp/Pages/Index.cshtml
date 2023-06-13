@@ -1,0 +1,55 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+
+    var name = "John";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @name</h1>
+    
+    <p>ASP.NET page</p>
+
+    @{
+        for (int i=1; i<=6; i++)
+        {
+            <h@(i)>Heading @i</h@(i)>
+        }
+    }
+    <hr/>
+
+    @{
+        Random rnd = new Random();
+    }
+
+    <div>@(rnd.Next())</div>
+
+
+    @{
+        var r = rnd.Next(2);
+
+        if (r == 0)
+        {
+            <div class="alert alert-primary">Zero</div>
+        } else
+        {
+            <div class="alert alert-danger">One</div>
+        }
+
+
+
+    }
+
+    @{
+        r = rnd.Next(100);
+
+        <div class="alert @( r<50 ? "alert-primary" :"alert-danger")">
+            @r
+        </div>
+    }
+
+
+
+</div>

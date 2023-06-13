@@ -26,7 +26,6 @@ try
     } else if (r == 2)
     {
         Console.WriteLine("null pointer");
-
         answer = nothing.Length;
     } else if (r == 3)
     {
@@ -34,7 +33,6 @@ try
         Console.WriteLine("everything ok.");
         answer = 21;
     }
-
 } catch (IndexOutOfRangeException ex)
 {
     Console.WriteLine("Index out of range");
