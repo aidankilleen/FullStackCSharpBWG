@@ -50,16 +50,13 @@ mgr.Delete(3);
 mgr.GetAll()
     .ForEach(member => Console.Write(member));
 
-
 Member? mem = mgr.FindById(1);
 
 if (mem != null)
 {
     mem.Name = "CHANGED";
     mgr.Update(mem);
-
 }
-
 
 mgr.GetAll()
     .ForEach(member => Console.WriteLine(member));
