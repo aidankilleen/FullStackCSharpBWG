@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMVCWebApp", "Hell
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMVCWebApp2", "HelloWorldMVCWebApp2\HelloWorldMVCWebApp2.csproj", "{90DDA06A-70A7-4993-B229-28C4EA61CB38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlServerHelloWorld", "SqlServerHelloWorld\SqlServerHelloWorld.csproj", "{C9F77309-3C4D-43FE-9C95-C8A895B1862B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{90DDA06A-70A7-4993-B229-28C4EA61CB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90DDA06A-70A7-4993-B229-28C4EA61CB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90DDA06A-70A7-4993-B229-28C4EA61CB38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F77309-3C4D-43FE-9C95-C8A895B1862B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F77309-3C4D-43FE-9C95-C8A895B1862B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F77309-3C4D-43FE-9C95-C8A895B1862B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F77309-3C4D-43FE-9C95-C8A895B1862B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
