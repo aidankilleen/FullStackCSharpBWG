@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorldMVCWebApp2.Models
 {
-    internal class Member
+    public class Member
     {
         public int Id { get; set; }
         public string Name { get; set; } = "";

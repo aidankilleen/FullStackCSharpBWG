@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorldMVCWebApp2.Models
 {
-    internal class MemberManager
+    public class MemberManager
     {
         List<Member> members = new List<Member>();
 
@@ -20,6 +20,17 @@ namespace HelloWorldMVCWebApp2.Models
 
         public void AddMember(Member member)
         {
+            if (member.Id == 0)
+            {
+                // assign a new Id
+                var maxId = 0;
+                if (members.Count > 0)
+                {
+                    maxId = members.Max(member => member.Id);
+                }
+                member.Id = maxId + 1;
+
+            }
             members.Add(member);
         }
         public void DisplayAll()

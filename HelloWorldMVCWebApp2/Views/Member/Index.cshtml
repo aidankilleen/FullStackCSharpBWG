@@ -7,6 +7,11 @@
 <div>
     <h2>Members Page</h2>
 
+    <a class="btn btn-success" 
+        asp-area="" 
+        asp-controller="Member" 
+        asp-action="Add">Add Member
+    </a>
     <table class="table">
         <thead>
             <tr>
@@ -20,10 +25,39 @@
             @foreach(Member member in ViewBag.Members)
             {
                 <tr>
-                    <td>@member.Id</td>
+                    <td>
+                        <a 
+                            asp-area="" 
+                            asp-controller="Member" 
+                            asp-action="Detail" 
+                            asp-route-id="@member.Id"
+                            asp-route-test="Xxxx">
+                            @member.Id
+                        </a>
+                    </td>
                     <td>@member.Name</td>
                     <td>@member.Email</td>
                     <td>@member.Active</td>
+                    <td>
+                        <a 
+                            class="btn btn-danger"
+                            asp-area="" 
+                            asp-controller="Member"
+                            asp-action="Delete"
+                            asp-route-id="@member.Id">
+                            Delete
+                        </a>
+                        <a
+                            class="btn btn-primary"
+                            asp-area=""
+                            asp-controller="Member"
+                            asp-action="Edit"
+                            asp-route-id="@member.Id">
+                            Edit
+                        </a> 
+                            
+
+                    </td>
                 </tr>
             }
         </tbody>

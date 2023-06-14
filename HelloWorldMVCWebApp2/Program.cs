@@ -1,7 +1,16 @@
+using HelloWorldMVCWebApp2.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// configure dependencies for dependency injection
+//builder.Services.AddScoped<MemberManager>();
+builder.Services.AddSingleton<MemberManager>();
+
+
+
 
 var app = builder.Build();
 

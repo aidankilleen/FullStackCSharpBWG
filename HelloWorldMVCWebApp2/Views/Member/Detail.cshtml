@@ -6,5 +6,21 @@
 <div>
     <h2>Member Detail</h2>
 
-    @ViewBag.Id
+    <table class="table">
+        <tr>
+            <td>Id</td><td>@ViewBag.Mbr.Id</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@ViewBag.Mbr.Name</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@ViewBag.Mbr.Email</td>
+        </tr>
+        <tr>
+            <td>Active</td>
+            <td>@(ViewBag.Mbr.Active ? "Active" : "Inactive")</td>
+        </tr>
+    </table>
 </div>
