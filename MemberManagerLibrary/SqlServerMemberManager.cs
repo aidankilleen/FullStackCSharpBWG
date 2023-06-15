@@ -8,7 +8,7 @@ namespace MemberManagerLibrary
     public class SqlServerMemberManager : IMemberManager
     {
         private SqlConnection _conn;
-        private string _connectionString = $@"Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=ptdbuser;Password=xxxxxxxx;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string _connectionString = $@"Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=ptdbuser;Password=xxxxxxx;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         public SqlServerMemberManager()
         {
@@ -71,26 +71,33 @@ namespace MemberManagerLibrary
 
         public void Update(Member memberToUpdate)
         {
-            var sql = $@"UPDATE members 
-                        SET name = '{ memberToUpdate.Name }', 
-                            email = '{ memberToUpdate.Email }', 
-                            active = { (memberToUpdate.Active ? 1 : 0)}
-                            WHERE id = {memberToUpdate.Id}";
+            var sql = $@"UPDATE members SET name = @name, email=@email, active=@active WHERE id=@id";
 
             SqlCommand cmd = new SqlCommand(sql, _conn);
+
+            cmd.Parameters.Add(new SqlParameter("@name", memberToUpdate.Name));
+            cmd.Parameters.Add(new SqlParameter("@email", memberToUpdate.Email));
+            cmd.Parameters.Add(new SqlParameter("@active", memberToUpdate.Active ? 1 : 0));
+            cmd.Parameters.Add(new SqlParameter("@id", memberToUpdate.Id));
+
             cmd.ExecuteNonQuery();
         }
 
 
         public Member AddMember(Member member)
         {
-            var sql = $@"INSERT INTO members
-                         (name, email, active)
-                        VALUES('{member.Name}', 
-                               '{member.Email}', 
-                                {(member.Active ? 1 : 0)})";
+            //var sql = $@"INSERT INTO members (name, email, active) VALUES('{member.Name}', '{member.Email}', {(member.Active ? 1 : 0)})";
+
+            // use a parameterised query to avoid SQL injection
+            var sql = $@"INSERT INTO members (name, email, active) VALUES(@name, @email, @active)";
 
             SqlCommand cmd = new SqlCommand(sql, _conn);
+
+            cmd.Parameters.Add(new SqlParameter("@name", member.Name));
+            cmd.Parameters.Add(new SqlParameter("@email", member.Email));
+            cmd.Parameters.Add(new SqlParameter("@active", member.Active ? 1 : 0));
+
+
             cmd.ExecuteNonQuery();
 
 

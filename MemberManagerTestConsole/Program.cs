@@ -2,7 +2,18 @@
 using MemberManagerLibrary;
 using System.Threading.Channels;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("SqlServerMemberManager Test Suite");
+
+IMemberManager mgr = new SqlServerMemberManager();
+
+
+Member newMember = new Member { Name = "','',0);delete from members where id=17;--" };
+
+mgr.AddMember(newMember);
+
+
+
+
 
 /*
 Member member = new Member { Id = 1, Name = "Alice", Email = "alice@gmail.com", Active = true };
@@ -27,7 +38,7 @@ mgr.GetAll()
 
 */
 
-IMemberManager mgr = new SqlServerMemberManager();
+
 /*
 mgr.GetAll()
     .ForEach(member => Console.WriteLine(member));
@@ -70,14 +81,14 @@ Member addedMember = mgr.AddMember(m);
 Console.WriteLine(addedMember);
 */
 
-
+/*
 mgr.GetAll()
     .ForEach(member => Console.WriteLine(member));
 
 
 mgr.Close();
 
-
+*/
 
 
 

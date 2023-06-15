@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemberManagerTest", "Member
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemberManagerTestConsole", "MemberManagerTestConsole\MemberManagerTestConsole.csproj", "{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticInvestigation", "StaticInvestigation\StaticInvestigation.csproj", "{0A0BAFDD-E1EB-4B42-8A31-A51E0FEE21D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A0BAFDD-E1EB-4B42-8A31-A51E0FEE21D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A0BAFDD-E1EB-4B42-8A31-A51E0FEE21D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A0BAFDD-E1EB-4B42-8A31-A51E0FEE21D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A0BAFDD-E1EB-4B42-8A31-A51E0FEE21D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
