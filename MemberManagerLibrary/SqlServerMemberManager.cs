@@ -27,7 +27,6 @@ namespace MemberManagerLibrary
 
             while (rdr.Read())
             {
-                Console.WriteLine(rdr.GetString(1));
                 var member = new Member
                 {
                     Id = rdr.GetInt32(0),

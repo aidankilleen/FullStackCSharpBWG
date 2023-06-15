@@ -9,7 +9,9 @@
     <Import_RootNamespace>MemberManagerLibrary</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IMemberManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Member.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MemberManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlServerMemberManager.cs" />
   </ItemGroup>
 </Project>
