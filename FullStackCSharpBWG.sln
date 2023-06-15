@@ -3,21 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldConsole", "HelloWorldConsole\HelloWorldConsole.csproj", "{55580A45-8429-4A12-B237-7D029536996C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldConsole", "HelloWorldConsole\HelloWorldConsole.csproj", "{55580A45-8429-4A12-B237-7D029536996C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParameterInvestigation", "ParameterInvestigation\ParameterInvestigation.csproj", "{9D9A2DAE-FBD6-4D14-8A45-BC3279AE6457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParameterInvestigation", "ParameterInvestigation\ParameterInvestigation.csproj", "{9D9A2DAE-FBD6-4D14-8A45-BC3279AE6457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralCSharpInvestigation", "GeneralCSharpInvestigation\GeneralCSharpInvestigation.csproj", "{C42CF321-A8CE-405F-8E90-14ED2FAD6F75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneralCSharpInvestigation", "GeneralCSharpInvestigation\GeneralCSharpInvestigation.csproj", "{C42CF321-A8CE-405F-8E90-14ED2FAD6F75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionInvestigation", "ExceptionInvestigation\ExceptionInvestigation.csproj", "{5B34A54F-D594-4FBF-AC40-C7758C6C4407}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionInvestigation", "ExceptionInvestigation\ExceptionInvestigation.csproj", "{5B34A54F-D594-4FBF-AC40-C7758C6C4407}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldWebApp", "HelloWorldWebApp\HelloWorldWebApp.csproj", "{82ADF36C-E2DB-4E6E-89AE-8689DBD5B210}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldWebApp", "HelloWorldWebApp\HelloWorldWebApp.csproj", "{82ADF36C-E2DB-4E6E-89AE-8689DBD5B210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMVCWebApp", "HelloWorldMVCWebApp\HelloWorldMVCWebApp.csproj", "{CB98A593-D6FF-4116-8978-60A18826E172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldMVCWebApp", "HelloWorldMVCWebApp\HelloWorldMVCWebApp.csproj", "{CB98A593-D6FF-4116-8978-60A18826E172}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldMVCWebApp2", "HelloWorldMVCWebApp2\HelloWorldMVCWebApp2.csproj", "{90DDA06A-70A7-4993-B229-28C4EA61CB38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorldMVCWebApp2", "HelloWorldMVCWebApp2\HelloWorldMVCWebApp2.csproj", "{90DDA06A-70A7-4993-B229-28C4EA61CB38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlServerHelloWorld", "SqlServerHelloWorld\SqlServerHelloWorld.csproj", "{C9F77309-3C4D-43FE-9C95-C8A895B1862B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerHelloWorld", "SqlServerHelloWorld\SqlServerHelloWorld.csproj", "{C9F77309-3C4D-43FE-9C95-C8A895B1862B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MemberManagerLibrary", "MemberManagerLibrary\MemberManagerLibrary.shproj", "{C278E2D7-8046-4500-A622-18BFB10FAEF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberManagerTest", "MemberManagerTest\MemberManagerTest.csproj", "{01AD8498-E056-49D5-8919-E6F4514D1B1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberManagerTestConsole", "MemberManagerTestConsole\MemberManagerTestConsole.csproj", "{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,11 +63,24 @@ Global
 		{C9F77309-3C4D-43FE-9C95-C8A895B1862B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9F77309-3C4D-43FE-9C95-C8A895B1862B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9F77309-3C4D-43FE-9C95-C8A895B1862B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AD8498-E056-49D5-8919-E6F4514D1B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AD8498-E056-49D5-8919-E6F4514D1B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AD8498-E056-49D5-8919-E6F4514D1B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AD8498-E056-49D5-8919-E6F4514D1B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A138FE9-90E0-49EF-AB0A-C13DAD8DA363}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MemberManagerLibrary\MemberManagerLibrary.projitems*{01ad8498-e056-49d5-8919-e6f4514d1b1a}*SharedItemsImports = 5
+		MemberManagerLibrary\MemberManagerLibrary.projitems*{9c151fdb-eeb6-41b5-a2bf-e2dc28de19d2}*SharedItemsImports = 5
+		MemberManagerLibrary\MemberManagerLibrary.projitems*{c278e2d7-8046-4500-a622-18bfb10faef9}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
