@@ -41,6 +41,27 @@ namespace MemberManagerLibrary
             return members;
         }
 
+        public Member? FindById(int id)
+        {
+            var sql = $"SELECT * FROM members WHERE id = { id }";
+
+            SqlCommand cmd = new SqlCommand(sql, _conn);
+            SqlDataReader rdr = cmd.ExecuteReader();
+
+            Member? member = null;
+            if (rdr.Read())
+            {
+                member = new Member
+                {
+                    Id = rdr.GetInt32(0),
+                    Name = rdr.GetString(1),
+                    Email = rdr.GetString(2),
+                    Active = rdr.GetBoolean(3)
+                };
+            }
+            return member;
+        }
+
 
         public void AddMember(Member member)
         {
@@ -57,10 +78,7 @@ namespace MemberManagerLibrary
             throw new NotImplementedException();
         }
 
-        public Member? FindById(int id)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public List<Member> GetActiveMembers()
         {
