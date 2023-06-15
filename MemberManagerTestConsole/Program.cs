@@ -44,7 +44,7 @@ mgr.GetAll()
     .ForEach(member => Console.WriteLine(member));
 
 */
-
+/*
 Member m = mgr.FindById(10);
 
 m.Name = "CHANGED";
@@ -55,6 +55,30 @@ mgr.Update(m);
 
 mgr.GetAll()
     .ForEach(member => Console.WriteLine(member));
+*/
+
+
+Member m = new Member
+{
+    Name = "Aidans New Member",
+    Email = "aidans.new.member@gmail.com",
+    Active = true
+};
+
+Member addedMember = mgr.AddMember(m);
+
+Console.WriteLine(addedMember);
+
+
+mgr.GetAll()
+    .ForEach(member => Console.WriteLine(member));
+
+
+mgr.Close();
+
+
+
+
 
 
 

@@ -6,13 +6,13 @@ namespace MemberManagerLibrary
 {
     public interface IMemberManager
     {
-        void AddMember(Member member);
+        Member AddMember(Member member);
         void Delete(int id);
         void DisplayAll();
         Member? FindById(int id);
         List<Member> GetActiveMembers();
         List<Member> GetAll();
         void Update(Member memberToUpdate);
-
+        void Close();
     }
 }

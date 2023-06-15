@@ -8,7 +8,7 @@ namespace MemberManagerLibrary
     public class SqlServerMemberManager : IMemberManager
     {
         private SqlConnection _conn;
-        private string _connectionString = @"Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=ptdbuser;Password=xxxxxxxx;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string _connectionString = $@"Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=ptdbuser;Password=xxxxxxx;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         public SqlServerMemberManager()
         {
@@ -82,9 +82,33 @@ namespace MemberManagerLibrary
         }
 
 
-        public void AddMember(Member member)
+        public Member AddMember(Member member)
         {
-            throw new NotImplementedException();
+            var sql = $@"INSERT INTO members
+                         (name, email, active)
+                        VALUES('{member.Name}', 
+                               '{member.Email}', 
+                                {(member.Active ? 1 : 0)})";
+
+            SqlCommand cmd = new SqlCommand(sql, _conn);
+            cmd.ExecuteNonQuery();
+
+
+            // return added member
+            // including the newly assigned id
+
+            sql = "SELECT @@IDENTITY";
+            cmd = new SqlCommand(sql, _conn);
+
+            var addedId = (Decimal)cmd.ExecuteScalar();
+
+            member.Id = (int)addedId;
+            return member;
+        }
+
+        public void Close()
+        {
+            _conn.Close();
         }
 
 

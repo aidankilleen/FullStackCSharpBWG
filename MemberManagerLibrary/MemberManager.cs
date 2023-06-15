@@ -18,7 +18,7 @@ namespace MemberManagerLibrary
             members.Add(new Member { Id = 4, Name = "Dan", Email = "dan@gmail.com", Active = true });
         }
 
-        public void AddMember(Member member)
+        public Member AddMember(Member member)
         {
             if (member.Id == 0)
             {
@@ -32,6 +32,7 @@ namespace MemberManagerLibrary
 
             }
             members.Add(member);
+            return member;
         }
         public void DisplayAll()
         {
@@ -79,6 +80,11 @@ namespace MemberManagerLibrary
                 members.RemoveAt(index);
                 members.Insert(index, memberToUpdate);
             }
+        }
+
+        public void Close()
+        {
+            members.Clear();
         }
 
 
