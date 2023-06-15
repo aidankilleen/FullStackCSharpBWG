@@ -28,9 +28,35 @@ mgr.GetAll()
 */
 
 IMemberManager mgr = new SqlServerMemberManager();
+/*
+mgr.GetAll()
+    .ForEach(member => Console.WriteLine(member));
+
+
+Member? m = mgr.FindById(2);
+Console.WriteLine("===========");
+Console.WriteLine(m);
+
+Console.WriteLine("===========");
+mgr.Delete(19);
 
 mgr.GetAll()
     .ForEach(member => Console.WriteLine(member));
+
+*/
+
+Member m = mgr.FindById(10);
+
+m.Name = "CHANGED";
+m.Email = "changed@gmail.com";
+m.Active = !m.Active;
+
+mgr.Update(m);
+
+mgr.GetAll()
+    .ForEach(member => Console.WriteLine(member));
+
+
 
 
 

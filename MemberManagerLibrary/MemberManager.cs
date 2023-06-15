@@ -13,7 +13,7 @@ namespace MemberManagerLibrary
         public MemberManager()
         {
             members.Add(new Member { Id = 1, Name = "Alice", Email = "alice@gmail.com", Active = true });
-            members.Add(new Member { Id = 2, Name = "Bob", Email = "bob@gmail.com", Active = false });
+            members.Add(new Member { Id = 2, Name = "Bobby", Email = "bobby@gmail.com", Active = true });
             members.Add(new Member { Id = 3, Name = "Carol", Email = "carol@gmail.com", Active = false });
             members.Add(new Member { Id = 4, Name = "Dan", Email = "dan@gmail.com", Active = true });
         }

@@ -59,7 +59,26 @@ namespace MemberManagerLibrary
                     Active = rdr.GetBoolean(3)
                 };
             }
+            rdr.Close();
             return member;
+        }
+        public void Delete(int id)
+        {
+            var sql = $"DELETE FROM members WHERE id = {id}";
+            SqlCommand cmd = new SqlCommand(sql, _conn);
+            cmd.ExecuteNonQuery();
+        }
+
+        public void Update(Member memberToUpdate)
+        {
+            var sql = $@"UPDATE members 
+                        SET name = '{ memberToUpdate.Name }', 
+                            email = '{ memberToUpdate.Email }', 
+                            active = { (memberToUpdate.Active ? 1 : 0)}
+                            WHERE id = {memberToUpdate.Id}";
+
+            SqlCommand cmd = new SqlCommand(sql, _conn);
+            cmd.ExecuteNonQuery();
         }
 
 
@@ -68,10 +87,7 @@ namespace MemberManagerLibrary
             throw new NotImplementedException();
         }
 
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public void DisplayAll()
         {
@@ -87,9 +103,6 @@ namespace MemberManagerLibrary
 
 
 
-        public void Update(Member memberToUpdate)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
