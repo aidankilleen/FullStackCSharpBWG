@@ -57,7 +57,7 @@ mgr.GetAll()
     .ForEach(member => Console.WriteLine(member));
 */
 
-
+/*
 Member m = new Member
 {
     Name = "Aidans New Member",
@@ -68,6 +68,7 @@ Member m = new Member
 Member addedMember = mgr.AddMember(m);
 
 Console.WriteLine(addedMember);
+*/
 
 
 mgr.GetAll()

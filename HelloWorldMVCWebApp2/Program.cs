@@ -1,4 +1,5 @@
-using HelloWorldMVCWebApp2.Models;
+
+using MemberManagerLibrary;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 // configure dependencies for dependency injection
 //builder.Services.AddScoped<MemberManager>();
-builder.Services.AddSingleton<MemberManager>();
+builder.Services.AddSingleton<IMemberManager, SqlServerMemberManager>();
 
 
 

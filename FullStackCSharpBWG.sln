@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerHelloWorld", "SqlS
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MemberManagerLibrary", "MemberManagerLibrary\MemberManagerLibrary.shproj", "{C278E2D7-8046-4500-A622-18BFB10FAEF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberManagerTest", "MemberManagerTest\MemberManagerTest.csproj", "{01AD8498-E056-49D5-8919-E6F4514D1B1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemberManagerTest", "MemberManagerTest\MemberManagerTest.csproj", "{01AD8498-E056-49D5-8919-E6F4514D1B1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberManagerTestConsole", "MemberManagerTestConsole\MemberManagerTestConsole.csproj", "{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemberManagerTestConsole", "MemberManagerTestConsole\MemberManagerTestConsole.csproj", "{9C151FDB-EEB6-41B5-A2BF-E2DC28DE19D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +80,7 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{01ad8498-e056-49d5-8919-e6f4514d1b1a}*SharedItemsImports = 5
+		MemberManagerLibrary\MemberManagerLibrary.projitems*{90dda06a-70a7-4993-b229-28c4ea61cb38}*SharedItemsImports = 5
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{9c151fdb-eeb6-41b5-a2bf-e2dc28de19d2}*SharedItemsImports = 5
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{c278e2d7-8046-4500-a622-18bfb10faef9}*SharedItemsImports = 13
 	EndGlobalSection

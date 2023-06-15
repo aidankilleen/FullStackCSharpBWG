@@ -1,4 +1,5 @@
-﻿using HelloWorldMVCWebApp2.Models;
+﻿
+using HelloWorldMVCWebApp2.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -11,8 +12,6 @@ namespace HelloWorldMVCWebApp2.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-
-            
         }
 
         public IActionResult Index()

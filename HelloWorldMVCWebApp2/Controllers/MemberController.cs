@@ -1,4 +1,5 @@
-﻿using HelloWorldMVCWebApp2.Models;
+﻿
+using MemberManagerLibrary;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq.Expressions;
 
@@ -6,10 +7,10 @@ namespace HelloWorldMVCWebApp2.Controllers
 {
     public class MemberController : Controller
     {
-        private MemberManager mgr;// = new MemberManager();
+        private IMemberManager mgr;// = new MemberManager();
         private readonly ILogger<MemberController> _logger;
 
-        public MemberController(MemberManager mgr, 
+        public MemberController(IMemberManager mgr, 
                 ILogger<MemberController> logger)
         {
             this.mgr = mgr;
