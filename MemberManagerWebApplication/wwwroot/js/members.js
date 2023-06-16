@@ -14,7 +14,6 @@ function onDelete(id) {
 
                 // update the table to reflect the new list
                 $(`#tr-${id}`).remove();
-
             }, 
             error: (error) => {
                 alert(error);

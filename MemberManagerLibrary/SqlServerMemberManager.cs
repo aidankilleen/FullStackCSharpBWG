@@ -8,10 +8,11 @@ namespace MemberManagerLibrary
     public class SqlServerMemberManager : IMemberManager
     {
         private SqlConnection _conn;
-        private string _connectionString = $@"Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=ptdbuser;Password=xxxxx;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string _connectionString;// = $@"Server=tcp:professionaltraining.database.windows.net,1433;Initial Catalog=trainingdb;Persist Security Info=False;User ID=ptdbuser;Password=xxxx;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
-        public SqlServerMemberManager()
+        public SqlServerMemberManager(IConfiguration _config)
         {
+            _connectionString = _config.GetValue<string>("ConnectionStrings:azuredb");
             _conn = new SqlConnection(_connectionString);
             _conn.Open();
         }
