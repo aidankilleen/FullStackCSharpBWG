@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemberManagerApi", "MemberM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberManagerWebApplication", "MemberManagerWebApplication\MemberManagerWebApplication.csproj", "{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickWebApp", "QuickWebApp\QuickWebApp.csproj", "{0B82DA9B-14C2-43C1-9C19-7641CAB988FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B82DA9B-14C2-43C1-9C19-7641CAB988FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B82DA9B-14C2-43C1-9C19-7641CAB988FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B82DA9B-14C2-43C1-9C19-7641CAB988FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B82DA9B-14C2-43C1-9C19-7641CAB988FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +104,7 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{01ad8498-e056-49d5-8919-e6f4514d1b1a}*SharedItemsImports = 5
+		MemberManagerLibrary\MemberManagerLibrary.projitems*{0b82da9b-14c2-43c1-9c19-7641cab988fa}*SharedItemsImports = 5
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{64ef7fa6-7fd5-454d-953a-af6d5f550368}*SharedItemsImports = 5
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{90dda06a-70a7-4993-b229-28c4ea61cb38}*SharedItemsImports = 5
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{9c151fdb-eeb6-41b5-a2bf-e2dc28de19d2}*SharedItemsImports = 5
