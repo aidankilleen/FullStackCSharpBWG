@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticInvestigation", "Stat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemberManagerApi", "MemberManagerApi\MemberManagerApi.csproj", "{64EF7FA6-7FD5-454D-953A-AF6D5F550368}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberManagerWebApplication", "MemberManagerWebApplication\MemberManagerWebApplication.csproj", "{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{64EF7FA6-7FD5-454D-953A-AF6D5F550368}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64EF7FA6-7FD5-454D-953A-AF6D5F550368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64EF7FA6-7FD5-454D-953A-AF6D5F550368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07C6DEE-0555-49CD-95E5-CE9FA01B736D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,5 +102,6 @@ Global
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{90dda06a-70a7-4993-b229-28c4ea61cb38}*SharedItemsImports = 5
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{9c151fdb-eeb6-41b5-a2bf-e2dc28de19d2}*SharedItemsImports = 5
 		MemberManagerLibrary\MemberManagerLibrary.projitems*{c278e2d7-8046-4500-a622-18bfb10faef9}*SharedItemsImports = 13
+		MemberManagerLibrary\MemberManagerLibrary.projitems*{e07c6dee-0555-49cd-95e5-ce9fa01b736d}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

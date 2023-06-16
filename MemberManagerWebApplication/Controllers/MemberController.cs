@@ -1,14 +1,14 @@
 ﻿using MemberManagerLibrary;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-namespace MemberManagerApi.Controllers
+namespace MemberManagerWebApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class MemberController : ControllerBase
     {
+
         IMemberManager _mgr;
 
         public MemberController(IMemberManager mgr)
@@ -40,7 +40,7 @@ namespace MemberManagerApi.Controllers
         public ActionResult<Member> Post([FromBody] Member memberToAdd)
         {
             Member addedMember = _mgr.AddMember(memberToAdd);
-            return Created($"/api/Member/{ addedMember.Id}", addedMember);
+            return Created($"/api/Member/{addedMember.Id}", addedMember);
         }
 
         // PUT api/<MemberController>/5
